@@ -5,47 +5,41 @@
         "factoryName": {
             "value": "makadf"
         },
-        "AzureDatabricks2_accessToken": {
-            "value": ""
-        },
-        "AzureSqlDW1_connectionString": {
-            "value": ""
-        },
-        "AzureStorage_Staging_connectionString": {
-            "value": ""
-        },
-        "AmazonS32_secretAccessKey": {
-            "value": ""
-        },
-        "AzureStorage1_connectionString": {
-            "value": ""
-        },
-        "Databricks Blob LS_connectionString": {
-            "value": ""
-        },
-        "Source_SQLDW_kwy_connectionString": {
-            "value": ""
-        },
-        "Destination_SQLDW_kwy_connectionString": {
-            "value": ""
-        },
-        "linkedService1_password": {
-            "value": ""
-        },
         "AmazonS31_secretAccessKey": {
             "value": ""
         },
         "AzureDatabricks1_accessToken": {
             "value": ""
         },
-        "SqlDB_WM_connectionString": {
+        "AzureDatabricks2_accessToken": {
             "value": ""
         },
-        "Drought_Meas_properties_typeProperties_fileName": {
-            "value": "dm_export_20100101_20180326.tsv"
+        "AzureSqlDW1_connectionString": {
+            "value": ""
         },
-        "Drought_Meas_properties_typeProperties_folderPath": {
-            "value": "environment/Drought"
+        "AzureStorage1_connectionString": {
+            "value": ""
+        },
+        "AzureStorage_Staging_connectionString": {
+            "value": ""
+        },
+        "Databricks Blob LS_connectionString": {
+            "value": ""
+        },
+        "Destination_SQLDW_kwy_connectionString": {
+            "value": ""
+        },
+        "Source_SQLDW_kwy_connectionString": {
+            "value": ""
+        },
+        "linkedService1_password": {
+            "value": ""
+        },
+        "AmazonS32_secretAccessKey": {
+            "value": ""
+        },
+        "SqlDB_WM_connectionString": {
+            "value": ""
         },
         "WaterMeas_Blob_properties_typeProperties_fileName": {
             "value": "July2001-Dec2001.tsv"
@@ -53,14 +47,17 @@
         "WaterMeas_Blob_properties_typeProperties_folderPath": {
             "value": "environment/NOAA WASH"
         },
+        "Drought_Meas_properties_typeProperties_fileName": {
+            "value": "dm_export_20100101_20180326.tsv"
+        },
+        "Drought_Meas_properties_typeProperties_folderPath": {
+            "value": "environment/Drought"
+        },
         "Databricks_Blob_properties_typeProperties_fileName": {
             "value": "part-00000-tid-6587081926162300554-0f3b1af3-5cfc-4ad7-9247-7f1070cb1791-1841-c000.csv"
         },
         "Databricks_Blob_properties_typeProperties_folderPath": {
             "value": "mycontainer"
-        },
-        "AmazonS32_properties_typeProperties_accessKeyId": {
-            "value": "AKIAIMDTG4LHXFE2WTSA"
         },
         "Drought Meas Params_properties_typeProperties_fileName": {
             "value": "@dataset().DFile"
@@ -68,8 +65,11 @@
         "Drought Meas Params_properties_typeProperties_folderPath": {
             "value": "@dataset().DPath"
         },
-        "linkedService1_properties_typeProperties_userName": {
-            "value": "makromer@microsoft.com"
+        "IncBlob_properties_typeProperties_fileName": {
+            "value": ""
+        },
+        "IncBlob_properties_typeProperties_folderPath": {
+            "value": "adfstagingcopydata"
         },
         "integrationRuntime2_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
             "value": ""
@@ -77,11 +77,11 @@
         "AmazonS31_properties_typeProperties_accessKeyId": {
             "value": "AKIAJHJOC6ITSHA22RGQ"
         },
-        "IncBlob_properties_typeProperties_fileName": {
-            "value": ""
+        "linkedService1_properties_typeProperties_userName": {
+            "value": "makromer@microsoft.com"
         },
-        "IncBlob_properties_typeProperties_folderPath": {
-            "value": "adfstagingcopydata"
+        "AmazonS32_properties_typeProperties_accessKeyId": {
+            "value": "AKIAIMDTG4LHXFE2WTSA"
         }
     }
 }
