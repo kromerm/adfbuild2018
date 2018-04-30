@@ -28,3 +28,7 @@ trainingSummary.residuals.write.format('com.databricks.spark.csv').mode('Overwri
 
 You'll need to create a mount point on your Azure Databricks cluster to your storage account for "/mnt/mypath/data.txt" like this:
 
+  dbutils.fs.mount(
+  source = "wasbs://mycontainer@myblobstore.blob.core.windows.net/",
+  mountPoint = "/mnt/mypath",
+  extraConfigs = Map("fs.azure.account.key.myblobstore.blob.core.windows.net" -> "This is my super secret storage key"))
