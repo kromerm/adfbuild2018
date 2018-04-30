@@ -1,0 +1,20 @@
+Here is the Spark Scala script that I used with my Azure Databricks notebook to bucket FIPS codes:
+
+val myvar = spark.sql("SELECT MOD(FIPS, 10) as FIPS_RANGE, COUNT(*) as FCount  FROM county_csv GROUP BY FIPS_RANGE")
+
+myvar.coalesce(1).write
+  .mode("overwrite")
+  .option("header", "true")
+  .format("com.databricks.spark.csv")
+  .save("/mnt/mypath/countycounts.csv")
+
+
+Yes, I cheated and used SparkSQL because I am that much of a DB guy.
+
+Note that you will need to map that local mount point "/mnt/mypath/countycounts.csv" using something like this on your
+Databricks cluster:
+
+  dbutils.fs.mount(
+  source = "wasbs://mycontainer@myblobstore.blob.core.windows.net/",
+  mountPoint = "/mnt/mypath",
+  extraConfigs = Map("fs.azure.account.key.myblobstore.blob.core.windows.net" -> "This is my super secret storage key"))
