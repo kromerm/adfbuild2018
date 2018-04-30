@@ -1,0 +1,30 @@
+I also have an optional ADF activity that calls a PySpark population predictions notebook which doesn't really predict populations.
+It's really just a dummy holder linear regression algorithm that I need to make work for population projections later.
+
+But if you'd like to wire up anyhow, here is the draft script in PySpark to add to your notebook:
+
+from pyspark.ml.regression import GeneralizedLinearRegression
+
+# Load training data
+# Load training data
+training = spark.read.format("libsvm")\
+    .load("/mnt/mypath/data.txt")
+    
+
+glr = GeneralizedLinearRegression(family="gaussian", link="identity", maxIter=10, regParam=0.3)
+
+lr = LinearRegression(maxIter=10, regParam=0.3, elasticNetParam=0.8)
+
+# Fit the model
+lrModel = lr.fit(training)
+
+# Summarize the model over the training set and print out some metrics
+trainingSummary = lrModel.summary
+
+#trainingSummary.residuals.show()
+#l = [('Alice', 1)]
+#df=sqlContext.createDataFrame(trainingSummary.residuals).collect()
+trainingSummary.residuals.write.format('com.databricks.spark.csv').mode('Overwrite').save('/mnt/mypath/population_predictions.csv')
+
+You'll need to create a mount point on your Azure Databricks cluster to your storage account for "/mnt/mypath/data.txt" like this:
+
