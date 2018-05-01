@@ -4,7 +4,7 @@ This document will explain how to understand, use and deploy the demo assets wit
 
 ## ARM Template
 
-The ARM Template JSON and associated ARM Template Parameters JSON files contain the Azure Data Factory that I built and used at the Build conference. To install this factory, deploy the template with the parameters file to Azure [with these instructions] (https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy).
+The ARM Template JSON and associated ARM Template Parameters JSON files contain the Azure Data Factory that I built and used at the Build conference. To install this factory, deploy the template with the parameters file to Azure [with these instructions](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy).
 
 In that factory you will see a series of ADF objects:
 
