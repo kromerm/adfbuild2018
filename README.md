@@ -15,3 +15,13 @@ In that factory you will see a series of ADF objects:
 * Water Demo Pipeline TEMPLATE
 
 This is the template used to create the other related water demo pipelines that use the same structure.
+
+* Water Demo Pipeline MAIN
+
+This is the primary sequential data loader and data transformation pipeline that you will use in this demo. It will sequentially acquire data from different sources: Blob, AWS, REST API and land it in Azure Blob, then transform it using Azure Databricks Notebooks and Azure SQL DW stored procedures, then load Azure SQL Data Warehouse. At the end of the pipeline, either a Success or a Failure email will be sent.
+
+* Water Demo with Params
+
+A copy of the Water Demo pipeline that includes parameters set in the pipeline and used in the Datasets as a way to dynamically set the files & folders that you will load. It also demonstrates that the activities in the pipeline do not need to depend on each other in a sequential manner. You can also execute activities in a parallel manner.
+
+
