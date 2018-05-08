@@ -28,11 +28,11 @@ A copy of the Water Demo pipeline that includes parameters set in the pipeline a
 
 The pipelines in this demo Azure Data Factory are primarily for demo purposes and for trying out features. But when you actually operationalize a production factory, you will build pipelines with parameters and loops. That makes your pipelines much more flexible re-usable. This pipeline shows how to use a loop for a load activity.
 
-### Databricks_Scala_Notebook
+## Databricks_Scala_Notebook
 
 This is the Notebook code for the Azure Databricks activity in the water pipelines that bucketizes (groups) data using SparkSQL inside a very simple Spark Scala script. You will need to put this code inside an Azure Databricks activity on your cluster to get the end-to-end pipeline to actually work.
 
-### adfbuild2018script.sql
+## adfbuild2018script.sql
 
 This SQL script contains the database schema contents (tables & stored procs) that are used in this demo. Stand-up an Azure SQL Data Warehouse and then execute this script file from SSMS connected to your Azure SQL DW database. It will create the tables that are loaded in the pipeline as well as the sprocs that are called from the stored proc activities.
 
