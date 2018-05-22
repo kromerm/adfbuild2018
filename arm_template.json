@@ -5,7 +5,7 @@
         "factoryName": {
             "type": "string",
             "metadata": "Data Factory Name",
-            "defaultValue": "makadf"
+            "defaultValue": ""
         },
         "AmazonS31_secretAccessKey": {
             "type": "secureString",
